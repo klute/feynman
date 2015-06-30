@@ -1,0 +1,43 @@
+\documentclass{article}
+% pdflatex Hinv
+% mpost hinv
+
+\usepackage{feynmp}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsRule{*}{mps}{*}{} 
+\usepackage{transparent}
+\usepackage[margin=0.0in, paperwidth=3.0in, paperheight=2.5in]{geometry}
+\begin{document}
+
+\clearpage
+\thispagestyle{empty}
+
+\begin{figure}
+  \centering
+%(along, up)
+  \begin{fmffile}{vbswwewk2}
+  \begin{fmfgraph*}(200,150)
+ 
+ \fmfleft{i1,i2}
+   \fmfright{o1,o2,o3,o4,o5,o6}
+   \fmf{vanilla}{i1,v1,o1} 
+   \fmf{vanilla, label=$q$,l.side=left}{i1,v1}
+   \fmf{vanilla, label=$q'$,l.side=left}{v1,o1}
+   \fmf{photon}{v1,v2,v4,v5}
+   \fmf{photon,label=$W^{+}$,l.side=left, tension=0.}{v1,v2}
+   \fmf{photon,label=$W^{+}$,l.side=left, tension=0.}{v2,v5}
+   \fmf{photon,label=$W^{+}$,l.side=right}{v2,v3}
+   \fmf{photon,label=$W^{+}$,l.side=left}{v2,v6}
+   \fmf{vanilla, label=$l^{+}$,l.side=right}{v3,o2}
+   \fmf{vanilla, label=$\nu$,l.side=left}{v3,o3}
+   \fmf{vanilla, label=$l^{+}$,l.side=right}{v6,o4}
+   \fmf{vanilla, label=$\nu$,l.side=left}{v6,o5}
+   \fmf{vanilla}{i2,v5,o6}
+   \fmf{vanilla, label=$q$,l.side=left}{i2,v5}
+   \fmf{vanilla, label=$q'$,l.side=left}{v5,o6}
+
+    \end{fmfgraph*}
+    \end{fmffile}
+\end{figure}
+
+\end{document}
